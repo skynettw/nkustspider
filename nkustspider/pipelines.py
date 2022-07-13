@@ -12,7 +12,7 @@ from pymongo import MongoClient
 class NkustspiderPipeline:
     def __init__(self):
         self.conn = MongoClient("mongodb://root:example@localhost:27017/")
-        self.db = self.conn.quoteDB
+        self.db = self.conn.nkust
         self.collection = self.db.quotes    
         
     def process_item(self, item, spider):
